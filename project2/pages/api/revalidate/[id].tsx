@@ -15,11 +15,12 @@ export default async function handler(
   let revalidated = false
 
   try {
-    await res.revalidate('/note/${id}')
+    await res.revalidate(`/note/${id}`)
     revalidated = true
   } catch (err) {
     console.log(err)
   }
-
-  res.json({ revalidated })
+  res.json({
+    revalidated,
+  })
 }
