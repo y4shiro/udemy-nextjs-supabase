@@ -75,4 +75,6 @@ export const useMutateComment = () => {
       },
     }
   )
+
+  return { createCommentMutation, updateCommentMutation, deleteCommentMutation }
 }
